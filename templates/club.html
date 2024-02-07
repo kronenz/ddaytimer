@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}까지 남은 시간</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5 d-flex justify-content-center align-items-center" style="height: 100vh; display: flex; justify-content: center; align-items: center; background-image: url('{{bgurl}}'); ">
+    <div class="card text-center" style="height: 50%; min-width: 320px; width: 50%; max-width: 100%; border-radius: 20px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); margin: auto; background-image: url('data:image/jpeg;base64,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'); background-size: cover;">
+        <div class="card-header"  style="margin: 20px;">
+            OO까지 남은 시간 ver 0.2
+        </div>
+        <div class="card-body" style="margin: 20px;">
+            <h1 class="card-title countdown" style="color: #17a2b8;  font-size: calc(2em + 1vw);">{{ countdown }}</h1>
+            <h1 class="card-title endtime" style="color: #17a2b8;  font-size: calc(2em + 1vw);">{{ endtime }}</h1>
+            <p class="card-text">열심히 일해봅시다!</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var endtimeElement = $('.endtime');
+        var endtimeValue = parseInt(endtimeElement.text());
+
+        var endDate = new Date(endtimeValue);
+        var formattedEndDate = "종료: "+ endDate.getFullYear() + "년" + 
+                               ("0" + (endDate.getMonth() + 1)).slice(-2) + "월" + 
+                               ("0" + endDate.getDate()).slice(-2) + "일 " + 
+                               ("0" + endDate.getHours()).slice(-2) + "시" + 
+                               ("0" + endDate.getMinutes()).slice(-2)  + "분";
+        endtimeElement.text(formattedEndDate);
+        endtimeElement.css('color', '#ffffff'); // 항상 흰색 글씨로 표시
+        
+        function updateCountdown() {
+            var countdownElement = $('.countdown');
+            var currentTime = new Date().getTime();
+            var countdownValue = endtimeValue - currentTime;
+            
+            if (countdownValue > 0) {
+                var days = Math.floor(countdownValue / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((countdownValue % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((countdownValue % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((countdownValue % (1000 * 60)) / 1000);
+                var milliseconds = countdownValue % 1000;
+
+                var formattedTime = "D-" + days.toString().padStart(2, '0') + " "+ 
+                                    hours.toString().padStart(2, '0') + ":" + 
+                                     minutes.toString().padStart(2, '0') + ":" + 
+                                     seconds.toString().padStart(2, '0') + "." + 
+                                     milliseconds.toString().padStart(3, '0');
+                
+                countdownElement.text(formattedTime);
+                countdownElement.css('color', '#ffffff'); // 항상 흰색 글씨로 표시
+                
+                if (countdownValue <= 60000) {
+                    // 1분 미만 남았을 때 클럽처럼 번쩍 번쩍 깜박이는 애니메이션 적용
+                    // 1분 미만 남았을 때 무작위 색상 적용
+                    var colors = ['#17a2b8', '#28a745', '#ffc107', '#dc3545'];
+                    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+                    countdownElement.css({
+                        'color': randomColor,
+                        'animation': 'flash 0.5s infinite'
+                    });
+                    $('.card').css({
+                        'animation': 'shake 0.5s infinite, flash 0.5s infinite'
+                    });
+                    $('body').css({
+                        'animation': 'flashBackground 0.5s infinite,'
+                    });
+                }
+            } else {
+                countdownElement.text('집에 가야지 여길 왜 와! (이걸 보고 있다면 당신은 야근중)');
+                countdownElement.css({
+                    'color': '#6c757d',
+                    'animation': 'none'
+                });
+                $('.card').css({
+                    'animation': 'none'
+                });
+                $('body').css({
+                    'animation': 'none'
+                });
+            }
+        }
+        setInterval(updateCountdown, 100);
+    });
+</script>
+<style>
+    @keyframes shake {
+        0%, 100% { transform: translate(0, 0); }
+        10%, 30%, 50%, 70%, 90% { transform: translate(-10px, -10px); }
+        20%, 40%, 60%, 80% { transform: translate(10px, 10px); }
+    }
+    @keyframes flash {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+    @keyframes flashBackground {
+        0%, 100% { background-color: rgba(255, 255, 255, 0.5); }
+        50% { background-color: rgba(0, 0, 0, 0.5); }
+    }
+    body {
+        animation: backgroundAnimation 3s infinite, wave 5s infinite linear;
+        background-image: linear-gradient(45deg, #000, #2E2EFE, #FE2E2E, #2EFE2E, #000), url('{{ bgurl }}');
+        background-size: 150% 150%;
+    }
+    @keyframes backgroundAnimation {
+        0% {background-position: 0% 50%;}
+        25% {background-position: 100% 50%;}
+        50% {background-position: 100% 50%;}
+        75% {background-position: 0% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+    @keyframes wave {
+        0% {background-position: 0% 50%;}
+        25% {background-position: 100% 0%;}
+        50% {background-position: 100% 100%;}
+        75% {background-position: 0% 100%;}
+        100% {background-position: 0% 50%;}
+    }
+</style>
+</body>
+</html>
